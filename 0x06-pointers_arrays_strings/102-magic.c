@@ -1,11 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - prints a[2] = 98
- * Return: Always 0.
+ * main -  the program prints a[2] = 98
+ * Return: 0
  */
 
 int main(void)
+
 {
 	int n;
 	int a[5];
@@ -15,15 +16,16 @@ int main(void)
 	p = &n;
 
 /*
-* write code here
-* Remember:
-* You are not allowed to use the variable a
-* You are not allowed to modify the variable p
-* You can only write one statement
-* You are not allowed to use ,
-* You are not allowed to code anything else
-* than the line of expected line of code
-*/
+ * write code here
+ * Remember:
+ * You are not allowed to use the variable a
+ * You are not allowed to modify the variable p
+ * You can only write one statement
+ * You are not allowed to use ,
+ * You are not allowed to code anything else
+ * than the line of expected line of code
+ */
+
 *(p + 5) = 98;
 /* ...so that it prints 98\n */
 printf("a[2] = %d\n", a[2]);
