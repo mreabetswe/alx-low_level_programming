@@ -1,5 +1,7 @@
 #include "main.h"
-#include <stdio.h>
+#include <stdiio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * main - It prints out the name of the program
@@ -9,10 +11,7 @@
  * Return: Void (success)
  */
 
-int main(int argc __attribute__((unused)), char *argv[])
-
+int main(int argc, char *argv[])
 {
-	printf("%s\n", *argv);
+	int k;
 
-	return (0);
-}
