@@ -2,13 +2,14 @@
 #include <stdlib.h>
 
 /**
-  * _calloc n - it prints out a function that allocates
-  * memory for an array, using malloc.
-  * @nmemb:the number of members
-  * @size: size of the bytes
-  *
-  * Return: Nothing
-  */
+ * _calloc - it prints out a function that allocates
+ * memory for an array, using malloc.
+ * @nmemb:the number of members
+ * @size: size of the bytes
+ *
+ * Return: Nothing
+ */
+
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	int a = 0, e = 0;
