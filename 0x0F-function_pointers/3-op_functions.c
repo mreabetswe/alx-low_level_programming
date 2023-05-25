@@ -1,32 +1,72 @@
 #include "3-calc.h"
 #include <stdlib.h>
-#include <string.h>
+#include <stdio.h>
 
 /**
-  * get_op_func - returns a pointer to the function
-  * @s: the operator passed as argument
+  * op_add - returns the sum
+  * @a: entry point
+  * @b: entry point
   *
-  * Return: ...
+  * Return: result
   */
-int (*get_op_func(char *s))(int, int)
+int op_add(int a, int b)
 {
-	op_t ops[] = {
-	{ "+", op_add },
-	{ "-", op_sub },
-	{ "*", op_mul },
-	{ "/", op_div },
-	{ "%", op_mod },
-	{ NULL, NULL }
-	};
-	int e = 0;
+	return (a + b);
+}
 
-	while (e < 5)
+/**
+  * op_sub - returns the difference between a & b
+  * @a: entry value
+  * @b: entry value
+  *
+  * Return: difference of a & b
+  */
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
+
+/**
+  * op_mul - returns the product of a & b
+  * @a: multiplicator 1
+  * @b: multiplicator 2
+  * Return: result
+  */
+int op_mul(int a, int b)
+{
+	return (a * b);
+}
+
+/**
+  * op_div - result of division
+  * @a: divisor
+  * @b: divident
+  * Return: result
+  */
+int op_div(int a, int b)
+{
+	if (b == 0)
 	{
-		if (strcmp(s, ops[e].op) == 0)
-			return (ops[e].f);
-
-		e++;
+		printf("Error\n");
+		exit(100);
 	}
 
-	return (0);
+	return (a / b);
+}
+
+/**
+  * op_mod - ruturns the remainder
+  * @a: entry point
+  * @b: entry point
+  * Return: result
+  */
+int op_mod(int a, int b)
+{
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
+	return (a % b);
 }
