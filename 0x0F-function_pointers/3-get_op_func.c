@@ -3,10 +3,10 @@
 #include <string.h>
 
 /**
-  * get_op_func - ...
-  * @s: ...
+  * get_op_func - returns a pointer to the function
+  * @s: the operator passed as argument
   *
-  * Return: ...
+  * Return: 0
   */
 int (*get_op_func(char *s))(int, int)
 {
@@ -18,14 +18,15 @@ int (*get_op_func(char *s))(int, int)
 	{ "%", op_mod },
 	{ NULL, NULL }
 	};
-	int e = 0;
+	int i = 0;
 
-	while (e < 5)
+	while (i < 5)
 	{
 		if (strcmp(s, ops[e].op) == 0)
 			return (ops[e].f);
 
-		e++;
+		i++;
 	}
 
 	return (0);
+}
