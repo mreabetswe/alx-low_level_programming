@@ -1,4 +1,3 @@
-julien@ubuntu:~/0x0f. Variadic functions$ cat 3-main.c
 #include "variadic_functions.h"
 
 /**
