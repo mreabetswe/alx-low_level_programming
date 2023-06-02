@@ -13,19 +13,39 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
-	unsigned int len = 0;
 
-	while (str[len])
-		len++;
+	if (head != NULL && str != NULL)
+	{
+		new = malloc(sizeof(list_t));
+		if (new == NULL)
+			return (NULL);
 
-	new = malloc(sizeof(list_t));
-	if (!new)
-		return (NULL);
+		new->str = strdup(str);
+		new->len = _strlen(str);
+		new->next = *head;
 
-	new->str = strdup(str);
-	new->len = len;
-	new->next = (*head);
-	(*head) = new;
+		*head = new;
 
-	return (*head);
+		return (new);
+	}
+
+	return (0);
+}
+
+/**
+  * _strlen - Returns the length of a string
+  * @s: String to count
+  * Return: String length
+  */
+int _strlen(const char *s)
+{
+	int r = 0;
+
+	while (*s)
+	{
+		s++;
+		r++;
+	}
+
+	return (r);
 }
