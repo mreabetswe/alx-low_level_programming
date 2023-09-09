@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 0x1A. C - Hash tables
 Description
 What you should learn from this project:
@@ -24,3 +25,13 @@ Write a function that prints a hash table.
 Write a function that deletes a hash table.
 7. $ht['Betty'] = 'Holberton'
 In PHP, hash tables are ordered. Wait… WAT? How is this even possible?
+=======
+<<<<<<< HEAD
+C - Functions, nested loops
+=======
+What is a dynamic library, how does it work, how to create one, and how to use it
+What is the environment variable $LD_LIBRARY_PATH and how to use it
+What are the differences between static and shared libraries
+Basic usage nm, ldd, ldconfig
+>>>>>>> 0x18-dynamic_libraries
+>>>>>>> origin/master
